@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, Rocket, Boxes, Mail } from 'lucide-react';
+import { Menu, X, Rocket } from 'lucide-react';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -40,6 +40,7 @@ export default function Navbar() {
             className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-white/80 hover:text-white hover:bg-white/10 transition"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle Menu"
+            aria-expanded={open}
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
